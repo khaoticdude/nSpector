@@ -29,7 +29,6 @@ def create_db():
             PRIMARY KEY("ip","port","protocol")
         );"""
 
-
         con = sqlite3.connect(database)
         cur = con.cursor()
 
