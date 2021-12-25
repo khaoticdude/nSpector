@@ -1,5 +1,5 @@
 # nSpector
-This tool was created so that NMAP scan results can be analyzed queried in a way similar to tools like Zenmap and Metasploit. Zenmap is no longer supported (python2), and Metasploit is a bit bulky just for this task.
+This tool was created so that NMAP scan results can be analyzed and queried in a way similar to tools like Zenmap and Metasploit. Zenmap is no longer supported (python2), and Metasploit is a bit bulky just for this task.
 
 ## Requirements
 - Python3
@@ -40,7 +40,7 @@ optional arguments:
 ```
 
 ### query sub-command
-Query the database for different for different criteria.
+Query the database for different criteria.
 ```
 nSpector.py query [-h] [-i IP] [-p PORT] [-s SERVICE] [--sort {ip,service,port,protocal}] [--simple] [--extended]
 
