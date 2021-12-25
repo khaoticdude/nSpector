@@ -6,7 +6,7 @@ This tool was created so that NMAP scan results can be analyzed queried in a way
 - NMAP scan results in XML format
 
 ## Usage
-#### Without sub-commands
+### Without sub-commands
 Running the tool without sub-commands will print basic information. Include the '-i' option to also print open ports.
 
 ```
@@ -26,7 +26,7 @@ Sub-commands:
     parse (p)           Parse an nmap file into the database.
 ```
 
-#### parse sub-command
+### parse sub-command
 Supply an XML-formatted NMAP scan result to add it to the database.
 ```
 nSpector.py parse [-h] [-c] -f nmap.xml [--force]
@@ -39,7 +39,7 @@ optional arguments:
   --force               Overwrite existing database.
 ```
 
-#### query sub-command
+### query sub-command
 Query the database for different for different criteria.
 ```
 nSpector.py query [-h] [-i IP] [-p PORT] [-s SERVICE] [--sort {ip,service,port,protocal}] [--simple] [--extended]
@@ -63,5 +63,5 @@ chmod +x ~/.local/bin/
 ```
 
 ## TODO
-[] Extend the results to show what scan found each host, "host scripts"
-[] Create functionality to manually add and delete entries
+- [ ] Extend the results to show what scan found each host, "host scripts"
+- [ ] Create functionality to manually add and delete entries
