@@ -184,6 +184,7 @@ def parse_nmap(args):
                 _exit(1)
             else: remove(database)
         create_db()
+        if args.file.lower() == "none": return
 
     nmap = args.file
     check_file(database,"database")
@@ -267,7 +268,7 @@ def main():
 
     add_data = subparsers.add_parser("parse", aliases = ['p'], help = "Parse an nmap file into the database.")
     add_data.add_argument("-c", "--create", action="store_true", help="Create the database if it does not exist. Will also overwrite an existing database.")
-    add_data.add_argument("-f", "--file", metavar="nmap.xml", help="The name of the nmap file in XML format.", required=True)
+    add_data.add_argument("-f", "--file", metavar="nmap.xml", help="The name of the nmap file in XML format. Supply \"NONE\" to create an empty database.", required=True)
     add_data.add_argument("--force", help = "Overwrite existing database.", action = "store_true")
     add_data.set_defaults(func = parse_nmap)
 
